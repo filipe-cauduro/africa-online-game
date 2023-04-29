@@ -11,6 +11,7 @@
     "socket.io": "^4.6.1"
   },
   "devDependencies": {
+    "@trivago/prettier-plugin-sort-imports": "^4.1.1",
     "@typescript-eslint/eslint-plugin": "^5.59.1",
     "@typescript-eslint/parser": "^5.59.1",
     "eslint": "^8.39.0",
@@ -22,7 +23,6 @@
     "typescript": "^5.0.4"
   },
   "scripts": {
-    "postinstall": "husky install",
     "dev": "nodemon src/index.ts"
   },
   "lint-staged": {
