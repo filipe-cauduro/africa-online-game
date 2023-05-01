@@ -8,11 +8,10 @@ export type User = {
   socket: Socket
 }
 
-export const createUser = ({
-  id,
-  name,
-  socket,
-}: Pick<User, "name" | "socket"> & Partial<Pick<User, "id">>): User => ({
+export type CreateUserProps = Partial<Pick<User, "id">> &
+  Pick<User, "name" | "socket">
+
+export const createUser = ({ id, name, socket }: CreateUserProps): User => ({
   id: id ?? v4(),
   name,
   socket,
